@@ -1,0 +1,63 @@
+.flex {
+  display: flex;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.accordion {
+  width: 65%;
+  margin: 15% auto;
+  border: 1px rgb(236, 235, 246) solid;
+  border-radius: 10px;
+}
+
+.accordion-content {
+  border: 1px rgb(236, 235, 246) solid;
+}
+
+.content-name {
+  padding-left: 25px;
+  font-family: sans-serif;
+  font-weight: 400;
+  color: rgb(60, 66, 74);
+  letter-spacing: 1.05;
+}
+
+.accordion-button {
+  background: none;
+  border: none;
+  margin: 0 20px;
+  font-weight: 400;
+  color: rgb(60, 66, 74);
+  cursor: pointer;
+}
+
+.accordion-top-item {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.accordion-bottom-item {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.active-item {
+  border: 5px solid rgb(81, 159, 198, 0.5);
+}
+
+.active-container p {
+  padding: 25px;
+  padding-left: 25px;
+  font-family: sans-serif;
+  font-weight: 400;
+  color: rgb(60, 66, 74);
+  letter-spacing: 1;
+}
+
+.active-container {
+  display: none;
+  transition: opacity 0.3s ease-in-out, max-height 0.3s ease-in-out;
+}
