@@ -3,12 +3,22 @@ document.addEventListener("DOMContentLoaded", function() {
 
     buttons.forEach(button => {
         button.addEventListener('click', function() {
-            button.closest('.accordion-content').classList.toggle('active-item');
-            let content = this.closest('.accordion-content').querySelector('.active-container');
-            if(content.style.display === 'none' || content.style.display === '') {
-                content.style.display = 'block';
-            } else {
-                content.style.display = 'none';
+
+            // Check if the clicked button's accordion is currently open
+            let isAlreadyOpen = this.parentElement.classList.contains('accordion__label_open');
+
+            // Remove active-item and accordion__label_open from all labels
+            buttons.forEach(innerButton => {
+                innerButton.parentElement.classList.remove('active-item');
+                innerButton.parentElement.classList.remove('accordion__label_open');
+                innerButton.closest('.accordion-content').querySelector('.active-container').style.maxHeight = '0';
+            });
+
+            // If the clicked button's accordion wasn't already open, open it.
+            if (!isAlreadyOpen) {
+                this.parentElement.classList.add('active-item');
+                this.parentElement.classList.add('accordion__label_open');
+                this.closest('.accordion-content').querySelector('.active-container').style.maxHeight = '1000px';
             }
         });
     });
