@@ -1,0 +1,33 @@
+.carousel {
+  overflow: hidden;
+  position: relative;
+  width: 300px; /* or whatever width you prefer */
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.3s;
+}
+
+.carousel-slide {
+  min-width: 100%; /* each slide takes up 100% width of carousel */
+}
+
+.carousel-button {
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.carousel-button--left {
+  left: 0;
+}
+
+.carousel-button--right {
+  right: 0;
+}
